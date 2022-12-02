@@ -25,6 +25,8 @@ _Not just dummy data, with this you can even turn the blog site into live news p
 
 _You may run this command once every 5 minutes or so to fetch latest news into your website_
 
+## Misc Configurations
+
 ### Configure Email
 
 _If you wish to use the Reset password feature, you have to provide your email server's (gmail in this case) credentials_
