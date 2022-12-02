@@ -34,3 +34,15 @@ _If you wish to use the Reset password feature, you have to provide your email s
 - Copy the given password and replace it with 'pass' at the last line of proj/settings.py file
 - Replace 'mail@gmail.com' with your gmail address on second last line of the same file
 - Restart the server and the email feature will hopefully work.
+
+### Configure AWS
+_For scalability, turn the debug off from settings.py, configure media and static folders accordingly for apache2/nginx and use AWS S3 instead of local storage_
+- pip install boto3 django-storages
+- settings.py:
+    + installed apps: 'storages'
+    + variables: AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY_ID,AWS_STORAGE_BUCKET_NAME
+    + AWS_S3_FILE_OVERWRITE=False
+    + AWS_DEFAUL_ACL=None
+    + DEFAULT_FILE_STORAGE='storages.backends.s3boto3.s3boto3storage'
+  
+_Completely remove the image scalling function save() in models.py and use lambda function to resize images on AWS. Alsom configure CORS settings on s3 accordingly_
