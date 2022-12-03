@@ -31,7 +31,7 @@ _You may run this command once every 5 minutes or so to fetch latest news into y
 
 _If you wish to use the Reset password feature, you have to provide your email server's (gmail in this case) credentials_
 
-- Make sure 2 Factor Authorization (2FA) is enabled on your gmail account. [Link to enable it](https://myaccount.google.com/u/2/signinoptions/two-step-verification/enroll-welcome)
+- Make sure 2 Factor Authorization (2FA) is enabled on your gmail account. [Link to enable it](https://myaccount.google.com/signinoptions/two-step-verification/enroll-welcome)
 - Generate a app Password for Mail service from [here](https://myaccount.google.com/apppasswords)
 - Copy the given password and replace it with 'pass' at the last line of proj/settings.py file
 - Replace 'mail@gmail.com' with your gmail address on second last line of the same file
